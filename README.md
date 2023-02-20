@@ -1,2 +1,2 @@
-# priyankamurugan.github.io
+# priyanka-murugan.github.io
 My portfolio
