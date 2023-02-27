@@ -310,10 +310,9 @@
 
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Master's in Business Analytics (MSBA)</h4>
-                <h4 class="h4 service-item-title">University of California, Davis</h4>
 
                 <p class="service-item-text">
-                 Data Management, Advanced Statistics, Big Data, Cloud Computing, Machine Learning. Awarded GSM Grant ($9,500 scholarship) and MSBA Fellowship ($7,000 scholarship)
+                 Data Management, Advanced Statistics, Big Data, Cloud Computing, Machine Learning. Awarded GSM Grant ($7,000 scholarship) and MSBA Fellowship ($9,500 scholarship)
 
                 </p>
               </div>
@@ -680,7 +679,7 @@
           <ul class="blog-posts-list">
 
             <li class="blog-post-item">
-              <a href="#">
+              <a href="{{ site.baseurl }}{{ post.url }}">
 
                 <figure class="blog-banner-box">
                   <img src="./assets/images/blog-3.jpg" alt="Design conferences in 2022" loading="lazy">
@@ -689,12 +688,27 @@
                 <div class="blog-content">
 
                   <div class="blog-meta">
-                    <p class="blog-category">Analytics</p>
+                    <p class="blog-category">Analytics  {{ post.excerpt }}</p>
 
                     <span class="dot"></span>
 
                     <time datetime="2022-02-23">Feb 20, 2022</time>
                   </div>
+                  
+                      <!-- <div class="posts">
+                        {% for post in site.posts %}
+                          <article class="post">
+
+                            <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+
+                            <div class="entry">
+                              {{ post.excerpt }}
+                            </div>
+
+                            <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+                          </article>
+                        {% endfor %}
+                      </div> -->
 
                   <h3 class="h3 blog-item-title">Application of PCA in Healthcare Marketing</h3>
 
@@ -879,7 +893,7 @@
 
           <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="mailto:pkrmu@ucdavis.edu" 
+          <form action="contact.php" 
           method="POST"
           enctype="multipart/form-data"
           name="EmailForm"
